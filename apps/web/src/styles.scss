@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  -ms-overflow-style: none; /* Edge, Internet Explorer */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
+  font-family: 'Roboto', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+#root {
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+
+  /* grid container settings */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}
+
+#root > header {
+  grid-area: header;
+  font-family: 'Roboto', sans-serif;
+}
+
+#root > main {
+  grid-area: main;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#root > footer {
+  grid-area: footer;
+  font-family: 'Open Sans', sans-serif;
+  h6 {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+  }
+}
